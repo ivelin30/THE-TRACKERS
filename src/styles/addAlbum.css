@@ -1,0 +1,86 @@
+.add-album-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+}
+.upload-file-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 420px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.497);
+  color: white;
+  background: linear-gradient(to bottom, black, #393e467d);
+}
+.upload-file-box h1 {
+  text-align: center;
+}
+.upload-file-box p {
+  margin-bottom: 8px;
+}
+.upload-file-box input {
+  background-color: transparent;
+  border: none;
+  color: white !important;
+  width: 200px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  outline: 0;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.upload-file-box button {
+  height: 40px;
+  color: white;
+  background: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  width: 230px;
+  margin-bottom: 20px;
+}
+.upload-file-box button:hover {
+  background: rgb(22, 22, 22);
+}
+.album-control {
+  background: linear-gradient(to bottom, black, #393e467d);
+  padding: 0 30px 30px 30px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.497);
+  border-radius: 10px;
+}
+.album-control h1 {
+  color: white;
+  text-align: center;
+}
+.control-albums-list {
+  display: grid;
+  justify-content: space-around;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, 150px);
+}
+.control-album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.control-album img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.control-album p {
+  color: white;
+  width: 150px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.control-album button {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  padding: 4px;
+  background: rgb(179, 0, 0);
+}

@@ -1,0 +1,39 @@
+.admin-nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to right, black, transparent);
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.logo {
+  font-size: 30px;
+  font-family: RobotoBold;
+}
+.logo p {
+  font-size: 18px;
+  text-align: right;
+  transform: translateX(20px);
+}
+.nav-btn {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .logo {
+    font-size: 20px;
+  }
+  .logo p {
+    font-size: 12px;
+  }
+  .nav-btn {
+    font-size: 15px;
+  }
+}

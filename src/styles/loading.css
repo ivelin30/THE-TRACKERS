@@ -1,0 +1,90 @@
+.loading-cont {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  top: 0;
+  width: 100vw;
+  height: 0;
+  opacity: 0;
+  background: black;
+  z-index: 10000;
+  transition: all 1s ease-in-out;
+  animation: flashBackgroundEffect 2.2s infinite;
+  animation-delay: 0.2s;
+}
+.loading-logo {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.flash {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  z-index: 100;
+  top: 56px;
+  left: 20px;
+  animation: flashEffect 2.2s infinite;
+}
+.loading-visible {
+  display: flex;
+  opacity: 1;
+  height: 100vh;
+  transition: all 0s ease-in-out;
+}
+.camera-logo {
+  height: 180px;
+}
+.loading-circle {
+  display: flex;
+  position: absolute;
+  height: 300px;
+  transform: rotate(17deg);
+  background: rgba(0, 0, 0, 0.021);
+  border-radius: 50%;
+  animation: spin 2s infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(17deg);
+  }
+  100% {
+    transform: rotate(377deg);
+  }
+}
+@keyframes flashBackgroundEffect {
+  60% {
+    background: white;
+  }
+  61% {
+    background: black;
+  }
+  80% {
+    background: white;
+  }
+  100% {
+    background: white;
+  }
+}
+@keyframes flashEffect {
+  40% {
+    background-color: red;
+    box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red,
+      0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 10px red,
+      0 0 20px red, 0 0 30px red, 0 0 400px red, 0 0 10px red, 0 0 20px red,
+      0 0 30px red, 0 0 40px red;
+  }
+  65% {
+    background: white;
+    box-shadow: none;
+  }
+  100% {
+    background: white;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,191 @@
+.container {
+  display: flex;
+  justify-content: center;
+  cursor: url("../resource/icons8-target-32.png") 16 16, auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+:root {
+  --img-size: 220px;
+}
+
+.album-slider {
+  margin-top: 8vh;
+  max-width: 95vw;
+  height: 500px;
+}
+.album {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 75vh;
+  margin-bottom: 80px;
+}
+.album-name {
+  display: flex;
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black;
+  bottom: 10px;
+  width: 280px;
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 0.3s ease-in-out;
+}
+.visible-name {
+  opacity: 1;
+  transform: translateX(-30px);
+  transition: all 1s ease-in-out;
+}
+
+.center {
+  position: relative;
+  margin-top: 50px;
+  scale: 1.2;
+  margin-bottom: 0;
+  z-index: 80;
+  transition: all 1s ease-in-out;
+  animation: k-left-side 6s infinite ease-in-out;
+  animation-direction: alternate;
+}
+.cover {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.cover-img {
+  width: 340px;
+  height: 55vh;
+  box-shadow: 0 0 10px black;
+  border-radius: 2px;
+  transition: all 1s ease-in-out;
+}
+.back-cover-img {
+  filter: brightness(60%) blur(0.5px);
+  transition: all 1s ease-in-out;
+}
+.album-circle {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.696);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  bottom: -5px;
+  transform: translateX(130px);
+  opacity: 0;
+  scale: 0;
+  transition: all 0.7s ease-in-out;
+}
+.visible-circle {
+  opacity: 1;
+  scale: 1;
+  transition: all 0.7s ease-in-out;
+}
+.album-circle img {
+  width: 90px;
+  height: 90px;
+  animation: rotation 8s infinite linear;
+}
+.album-circle div {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  transform: translateY(4px);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes k-left-side {
+  0% {
+    transform: translate(-1px, -10px) rotateY(-10deg);
+  }
+
+  25% {
+    transform: translate(-2px, 10px) rotateY(0deg);
+  }
+  75% {
+    transform: translate(1px, -4px) rotateY(10deg);
+  }
+
+  100% {
+    transform: translate(1px, 7px) rotateY(0deg);
+  }
+}
+.next-arrow {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.502);
+  color: white;
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  top: 40%;
+  right: 0px;
+  z-index: 80;
+}
+.prev-arrow {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.543);
+  color: white;
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  top: 40%;
+  left: 0px;
+  z-index: 80;
+}
+@media (max-width: 425px) {
+  .cover-img {
+    width: 200px;
+    height: 350px;
+  }
+  .album-name {
+    font-size: 25px;
+    width: 180px;
+  }
+  .album-circle {
+    width: 40px;
+    height: 40px;
+    transform: translateX(80px);
+  }
+  .album-circle img {
+    width: 80px;
+    height: 80px;
+  }
+  .album-circle div {
+    font-size: 25px;
+  }
+  .next-arrow,
+  .prev-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .cover-img {
+    width: 300px;
+  }
+}
