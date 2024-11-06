@@ -1,3 +1,9 @@
+Starting!!!
+1. install npm
+2. add .env file with MONGODB_URI and PORT
+3. run backend > npm run dev
+4. run frontend > npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
