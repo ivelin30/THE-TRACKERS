@@ -1,3 +1,4 @@
+The project is not finished! in progress...
 Starting!!!
 1. install npm
 2. add .env file with MONGODB_URI and PORT
